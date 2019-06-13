@@ -8,7 +8,7 @@ docker run --rm --mount type=bind,source=%cd%,target=/tmp/home/mutate -it mutati
 ```
 
 ```
-cd ~/mutate/mull-hello
+cd ~/mutate/
 ./compile-build
 mull-cxx -test-framework=GoogleTest -mutators=math_mul_mutator \
   -ld_search_path /lib/x86_64-linux-gnu/ \
