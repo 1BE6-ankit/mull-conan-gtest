@@ -1,6 +1,7 @@
 if [ -d "build" ]; then rm -rf build; fi
 
 mkdir build && cd build
+export CXXFLAGS="-fembed-bitcode -g"
 conan install .. -s compiler=clang --build=missing -s compiler.version=8 -s compiler.libcxx=libstdc++11
 cmake \
   -DCMAKE_CXX_FLAGS="-fembed-bitcode -g -O0" \
